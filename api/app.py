@@ -8,6 +8,10 @@ def consume():
     placa, contorno = consumeApiComputerVision()
     return jsonify({"placa" : placa, "contorno" : contorno})
 
+@app.route('/health')
+def consume():
+    return jsonify({"status" : "SERVICE OK"})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
