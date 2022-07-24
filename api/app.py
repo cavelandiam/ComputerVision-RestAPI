@@ -12,6 +12,10 @@ def consume():
 def consume():
     return jsonify({"status" : "SERVICE OK"})
 
+@app.route('/')
+def consume():
+    return jsonify({"status" : "HELLO FROM API PYTHON - COMPUTER VISION"})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
